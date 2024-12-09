@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+      table.dataframe, .dataframe th, .dataframe td {
+border: none;
+border-bottom: 1px solid #C8C8C8;
+border-collapse: collapse;
+text-align:left;
+padding: 10px;
+margin-bottom: 40px;
+font-size: 0.9em;
+}
+
+.male th {
+  background-color: #add8e6;
+  color: white;
+}
+
+.female th {
+  background-color: #77dd77;
+  color: white;
+}
+
+tr:nth-child(odd)		{ background-color:#eee; }
+tr:nth-child(even)	{ background-color:#fff; }
+
+tr:hover            { background-color: #ffff99;}
+      </style>
+</head>
+<body>
+
+<div class="container">
+    {% include "imagesstyle.html" %}
+<div class="panel panel-default">
+    <div class="panel-heading">Upload Data</div>
+    <div class="panel-body">
+        <form action="uploadsave.html" method="post" enctype="multipart/form-data">
+ <div class="form-group">
+    <label for="email">Upload:</label>
+    <input id="photo" name ="photo" type="file" class="form-control" placeholder="choose file">
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-default">Submit</button>
+  </div>
+ 
+ 
+  <div class="card-body">
+      <div class="m-b-30">
+              {{ tables | safe }}
+          </div>
+</div>
+ <a href="chart.html" class="btn btn-success">Train</a>
+</form> 
+	</div>
+  </div>
+</div>
+
+</body>
+</html>

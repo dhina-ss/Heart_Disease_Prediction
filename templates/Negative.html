@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+      table.dataframe, .dataframe th, .dataframe td {
+border: none;
+border-bottom: 1px solid #C8C8C8;
+border-collapse: collapse;
+text-align:left;
+padding: 10px;
+margin-bottom: 40px;
+font-size: 0.9em;
+}
+
+.male th {
+  background-color: #add8e6;
+  color: white;
+}
+
+.female th {
+  background-color: #77dd77;
+  color: white;
+}
+
+tr:nth-child(odd)		{ background-color:#eee; }
+tr:nth-child(even)	{ background-color:#fff; }
+
+tr:hover            { background-color: #ffff99;}
+      </style>
+</head>
+<body>
+
+<div class="container">
+    {% include "imagesstyle.html" %}
+<div class="panel panel-default">
+    <div class="panel-heading"><h4>Predicted Result</h4></div>
+    <div class="panel-body">
+        <form>
+ <div class="form-group">
+    <label for="email"><h4 style="color:green">Negative</h4></label>
+   
+  </div>
+  <div class="form-group">
+<img src="static/images/green.png" />
+  </div>
+  <div class="form-group">
+    <label for="email">You may have a healthy heart </label>
+  </div>
+ 
+ 
+</form> 
+	</div>
+  </div>
+</div>
+
+</body>
+</html>

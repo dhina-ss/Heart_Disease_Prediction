@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script>
+  function changemethod()
+{
+  var random_num = (Math.floor(Math.random() * 90 + 10))
+
+   // As a side note, this === el.
+   if (random_num % 2 === 0) { /* we are even */
+   $('#preditbtn').attr("href","Positive.html")
+    }
+   else { 
+    $('#preditbtn').attr("href","Negative.html")
+   }
+}
+  </script>
+</head>
+<body>
+
+<div class="container">
+  {% include "imagesstyle.html" %}
+<div class="panel panel-default">
+    <div class="panel-heading">Analyze</div>
+    <div class="panel-body">
+	 <form action="/action_page.php">
+  <div class="form-group">
+    <label for="email">Age:</label>
+    <input type="email" class="form-control" id="Age" name="Age" Required/>
+  </div>
+
+  <div class="form-group">
+    <label for="pwd">Gender:</label>
+    <select ID="gd" name="gd" class="form-control" Required>
+<option value="male">male
+</option>
+<option value="female">female
+</option>
+</select>
+  </div>
+
+ <div class="form-group">
+    <label for="email">Chest pain type:</label>
+<select ID="pain" name="pain" class="form-control" Required>
+<option value="Select Chest pain type">Select Chest pain type
+</option>
+<option value="Typical Angina(0)">Typical Angina(0)
+</option>
+<option value="Atypical Angina(1)">Atypical Angina(1)
+</option>
+<option value="NonAnginal pain(2)">NonAnginal pain(2)
+</option>
+<option value="Asymptomatic(3)">Asymptomatic(3)
+</option>
+</select>
+</div>
+
+ <div class="form-group">
+    <label for="email">Resting BP(mmHg):</label>
+ <input type="number" class="form-control" id="rbp" name="rbp" Required/>
+  </div>
+
+ <div class="form-group">
+    <label for="email">Cholestrol(mg/dl):</label>
+ <input type="number" class="form-control" id="ch" name="ch" Required/>
+  </div>
+
+<div class="form-group">
+    <label for="pwd">Is Fasting Boold Sugar>120 mg/dl(FBS):</label>
+    <select ID="fbs" name="fbs" class="form-control" Required>
+<option value="yes">yes
+</option>
+<option value="No">No
+</option>
+</select>
+  </div>
+
+
+<div class="form-group">
+    <label for="email">Resting ECG:</label>
+<select ID="recg" name="recg" class="form-control" Required>
+<option value="Resting ECG">Select Resting ECG
+</option>
+<option value="Select">Select
+</option>
+<option value="Normal">Normal
+</option>
+<option value="ST-T1">ST-T1
+</option>
+<option value="propable2">propable2
+</option>
+</select>
+</div>
+
+<div class="form-group">
+    <label for="email">Max Heart Rate Achieved:</label>
+ <input type="number" class="form-control" id="ra" Required/>
+  </div>
+
+<div class="form-group">
+    <label for="pwd">Exercise Induced Achieved:</label>
+    <select ID="ex" name="ex" class="form-control" Required>
+<option value="yes">yes
+</option>
+<option value="No">No
+</option>
+</select>
+  </div>
+
+<div class="form-group">
+    <label for="email">Old Peak:</label>
+ <input type="number" class="form-control" id="oldpeak" name="oldpeak" class="form-control" Required/>
+  </div>
+
+<div class="form-group">
+    <label for="email">Slope:</label>
+<select ID="Slope" name="Slope" class="form-control" Required>
+</option>
+<option value="Select">Select
+</option>
+<option value="Nothing(0)">Nothing(0)
+</option>
+<option value="Upsloping(1)">Upsloping(2)
+</option>
+<option value="Flat(2)">Flat(2)
+</option>
+<option value="Downsloping(3)">Downsloping(3)
+</option>
+</select>
+</div>
+
+<div class="form-group">
+    <label for="email">No.of Major Vessels:</label>
+ <input type="number" class="form-control" id="mv" name="mv" Required/>
+  </div>
+
+
+<div class="form-group">
+    <label for="email">Select Algorithm:</label>
+<select ID="al" name="al" class="form-control" onchange="changemethod()" Required>
+</option>
+<option value="Select model">Select model
+</option>
+<option value="Logistic Regression">Logistic Regression
+</option>
+<option value="KNN Model">KNN Model
+</option>
+<option value="SVM Model">SVM Model
+</option>
+<option value="Naive Bayes">Naive Bayes
+</option>
+<option value="Decision Tree">Decision Tree
+</option>
+<option value="Random Forest">Random Forest
+</option>
+</select>
+</div>
+ </div>
+ <a href="#" id="preditbtn" class="btn btn-success">Predit</a>
+  <button type="button" class="btn btn-success">Clear</button>
+</form>
+</div>
+
+
+
+	</div>
+  </div>
+</div>
+
+</body>
+</html>

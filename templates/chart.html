@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src='static/Chart.min.js'></script>
+
+</head>
+<body>
+
+<div class="container">
+    {% include "imagesstyle.html" %}
+<div class="panel panel-default">
+    <div class="panel-heading">Upload Data</div>
+    <div class="panel-body">
+        <form action="uploadsave.html" method="post" enctype="multipart/form-data">
+   <div class="card-body">
+      <div class="m-b-30">
+        <div class="col-md-6">
+            <canvas id="bar-chart-grouped" width="400" height="350"></canvas>
+<script>
+new Chart(document.getElementById("bar-chart-grouped"), {
+type: 'bar',
+data: {
+labels: ["Algorithms"],
+datasets: [
+{
+label: "Logistic Reason",
+backgroundColor: "#3e95cd",
+data: [80.1]
+}, {
+label: "KNN",
+backgroundColor: "#8e5ea2",
+data: [89.1]
+},
+{
+label: "SVM",
+backgroundColor: "Red",
+data: [85.4]
+},
+{
+label: "Navie Bayes",
+backgroundColor: "blue",
+data: [78.5]
+},
+{
+label: "Decision Tree",
+backgroundColor: "pink",
+data: [85.1]
+},
+{
+label: "Random Forest",
+backgroundColor: "green",
+data: [89.9]
+}
+]
+},
+options: {
+title: {
+display: true,
+text: 'Result'
+}
+}
+});
+
+</script>
+         </div>
+          </div>
+</div>
+ <a href="analysis.html" class="btn btn-success">Analyze</a>
+</form> 
+	</div>
+  </div>
+</div>
+
+</body>
+</html>
